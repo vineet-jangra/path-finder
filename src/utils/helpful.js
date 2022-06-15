@@ -1,6 +1,6 @@
 const selector = document.getElementsByClassName('node');
 
-const getPath = (parent) => {
+const getPat = (parent) => {
     let index = parent.length - 1;
     let X = parent[index][0];
     let Y = parent[index][1];
