@@ -1,0 +1,170 @@
+* {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.navBar {
+    background-color: 	#476bb5;
+    text-align: left;
+}
+/* this is about the Name Path finder and it will reload al well */
+.name-reload-div {
+    color: white;
+    font-size: 1.8rem;
+    padding: 10px;
+    margin-right: 35px;
+}
+.name-reload-div:hover {
+    text-decoration: none;
+    color: #6dd2ed;
+}
+.dropdown-style {
+    display: inline-block;
+    margin-right: 45px;
+}
+.dropdown-toggler-btn {
+    cursor: pointer;
+    background-color:	#476bb5;
+    color: white;
+    border: none;
+    font-size: 1.8rem;
+    padding: 10px;
+}
+.dropdown-toggler-btn:hover {
+    color: #6dd2ed;
+}
+
+#style-for-menu {
+    background-color: #5578c0;
+    width: 250px;
+}
+#style-for-menu2 {
+    background-color: #5578c0;
+    width: 240px;
+}
+a.options-for-algo {
+    cursor: pointer;
+
+    font-size: 1.4rem;
+    color: white;
+    margin-right: 35px;
+}
+a.options-for-algo:hover {
+    background-color: #324e85;
+    color: white;
+}
+
+.visualize-button {
+    cursor: pointer;
+    border: none;
+    background-color: #476bb5;
+    font-size: 1.8rem;
+    color: white;
+    margin-right: 45px;
+}
+.visualize-button:hover {
+    color: #86d1e6;
+}
+.visualize-main-button {
+    background-color: #688bd3;
+    cursor: pointer;
+    font-size: 1.6rem;
+    color: white;
+    margin-right: 45px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #476bb5;
+}
+.disabled-button {
+    background-color: red;
+    cursor: not-allowed;
+    font-size: 1.6rem;
+    color: white;
+    margin-right: 40px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+.visualize-main-button:hover {
+    background-color: #476bb5;
+    border: 1px solid #688bd3;
+}
+
+.message-div {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 1.9rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    color: black;
+    z-index: 100;
+}
+
+/* boxes*/
+.outer-div {
+    display: block;
+    text-align: left;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.path-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: yellow;
+    margin-left: 10px;
+}
+.visited-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: turquoise;
+}
+.weight-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../PathfindingVisualizer/Node/weight.svg");
+}
+.start-box {
+    display: inline-block;
+    margin-top: 10px;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../PathfindingVisualizer/Node/start.svg");
+}
+.end-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../PathfindingVisualizer/Node/target.svg");
+}
+.direction-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("../PathfindingVisualizer/Node/up.svg");
+}
+.wall-box {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+}
+.name-tag {
+    font-family: Arial, Helvetica, sans-serif;
+    display: inline-block;
+    font-size: 1.8rem;
+    margin-left: 10px;
+    margin-right: 50px;
+}

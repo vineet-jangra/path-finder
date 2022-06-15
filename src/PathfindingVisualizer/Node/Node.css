@@ -1,0 +1,144 @@
+.node {
+    width: 31px;
+    height: 32px;
+    display: inline-block;
+    margin-top: -7px;
+}
+.node-normal {
+    border: 1px solid rgb(175, 216, 248);
+    background-color: white;
+    background-image: none;
+}
+.node-finish {
+    background-image : url('target.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid rgb(175, 216, 248);
+
+}
+.node-start {
+    background-image: url('start.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid rgb(175, 216, 248);
+
+}
+.node-wall {
+    background-color: #333;
+    border: none;
+    fill: rgb(128, 128, 128);
+    stroke: rgb(0, 0, 0);
+    stroke-opacity: 0.2;
+    transform: matrix(1, 0, 0, 1, 0, 0);
+    stroke-width: 0.997009;
+}
+.node-weight {
+    background-image: url("weight.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation-name: weightNodes;
+    animation-duration: 0.2s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+}
+
+.node-right {
+    background-image: url("right.svg");
+    background-color: yellow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.node-down {
+    background-image: url("down.svg");
+    background-color: yellow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.node-up {
+    background-image: url("up.svg");
+    background-color: yellow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.node-left {
+    background-image: url("left.svg");
+    background-color: yellow;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.node-visited {
+    background-color: turquoise;
+    border: 1px solid rgb(175, 216, 248);
+    animation-name: wallNodes;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.node-entered {
+    background-color: rgb(34, 194, 119);
+    border: 1px solid rgb(175, 216, 248);
+    animation-name: wallNodes;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+.node-path {
+    background-color: yellow;
+    border: none;
+     animation-name: specialNodes;
+    animation-duration: 1.0s;
+    animation-timing-function: ease-in;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+@keyframes specialNodes {
+    0% {
+        transform: scale(.25);
+      }
+   
+    50% {
+        transform: scale(1.2);
+    }
+   
+    100% {
+    transform: scale(1.0);
+    }
+}
+@keyframes weightNodes {
+    0% {
+        transform: scale(0.75);
+        
+    }
+    100% {
+        transition: scale(1.0);
+    }
+}
+@keyframes wallNodes {
+    from {background-color: rgb(17, 90, 187);}
+    to {background-color: turquoise;}
+    0% {
+        transform: scale(0.75);
+        
+    }
+    100% {
+        transition: scale(1.0);
+    }
+}
