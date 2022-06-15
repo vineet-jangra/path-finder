@@ -20,7 +20,7 @@ const getPath = (parent) => {
     // const newAnimation = getPathWithDirection(animation, grid);
     return animation;
 }
-const getPathWithDirection = (animation, grid) => {
+const getPathWithDirectio = (animation, grid) => {
     const directionPath = [];
     for(let i = 0; i < animation.length; i++) {
         const a = Math.floor(animation[i] / 61);
@@ -40,7 +40,7 @@ const getPathWithDirection = (animation, grid) => {
     }
     return directionPath;
 }
-const doVisitedAnimation = async(doAnimation, start, end, animationSpeed) => {
+const doVisitedAnimatio = async(doAnimation, start, end, animationSpeed) => {
     // do as same as slow one
     for(let i = 0; i < doAnimation.length; i++) {
         if(doAnimation[i][0] === start || doAnimation[i][0] === end) continue;
@@ -57,7 +57,7 @@ const doVisitedAnimation = async(doAnimation, start, end, animationSpeed) => {
         }, x)
     });
 }
-const doPathAnimation = (grid, shortestPath, start, end, animationSpeed) => {
+const doPathAnimatio = (grid, shortestPath, start, end, animationSpeed) => {
     // selector[shortestPath[1][0]].className = "node node-left";
     if(shortestPath[0] === start) {
         shortestPath = getPathWithDirection(shortestPath, grid);
@@ -81,7 +81,7 @@ const doPathAnimation = (grid, shortestPath, start, end, animationSpeed) => {
         }, i * animationSpeed);
     }
 }
-const doInstantAnimation = (grid, doAnimation, start, end, parent, path, result) => {
+const doInstantAnimatio = (grid, doAnimation, start, end, parent, path, result) => {
     for(let i = 0; i < doAnimation.length; i++) {
         const c = doAnimation[i][1] === 't' ? " node-weight" : "";
         if( doAnimation[i][0] === start || doAnimation[i][0] === end) continue;
@@ -107,7 +107,7 @@ const doInstantAnimation = (grid, doAnimation, start, end, parent, path, result)
         selector[shortestPath[i][0]].className = "node node-path " + x;
     }
 }
-const isCellValid = (grid, X, Y, visited) => {
+const isCellVali = (grid, X, Y, visited) => {
     if(X < 0 || X >= 21 || Y < 0 || Y >= 61) {
         return false;
     }
@@ -118,9 +118,9 @@ const isCellValid = (grid, X, Y, visited) => {
 }
 
 module.exports = {
-    getPath,
-    doVisitedAnimation,
-    doPathAnimation,
-    doInstantAnimation,
-    isCellValid,
+    getPath: getPat,
+    doVisitedAnimation: doVisitedAnimatio,
+    doPathAnimation : doPathAnimatio,
+    doInstantAnimation: doInstantAnimatio,
+    isCellValid: isCellVali,
 }
