@@ -117,10 +117,10 @@ const isCellVali = (grid, X, Y, visited) => {
     return true;
 }
 
-module.exports = {
-    getPath: getPat,
-    doVisitedAnimation: doVisitedAnimatio,
-    doPathAnimation : doPathAnimatio,
-    doInstantAnimation: doInstantAnimatio,
-    isCellValid: isCellVali,
-}
+export{
+    getPat as getPath,
+    doVisitedAnimatio as doVisitedAnimation,
+    doPathAnimatio as doPathAnimation,
+    doInstantAnimatio as doInstantAnimation,
+    isCellVali as isCellValid,
+};
