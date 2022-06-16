@@ -60,7 +60,7 @@ const doVisitedAnimatio = async(doAnimation, start, end, animationSpeed) => {
 const doPathAnimatio = (grid, shortestPath, start, end, animationSpeed) => {
     // selector[shortestPath[1][0]].className = "node node-left";
     if(shortestPath[0] === start) {
-        shortestPath = getPathWithDirection(shortestPath, grid);
+        shortestPath = getPathWithDirectio(shortestPath, grid);
     }
     for(let i = 1; i < shortestPath.length; i++) {
         let clas;
@@ -90,7 +90,7 @@ const doInstantAnimatio = (grid, doAnimation, start, end, parent, path, result) 
     if(result === 'failure') return;
     if(path && path.length > 0) {
         if(path[0] === start) {
-            path = getPathWithDirection(path, grid);
+            path = getPathWithDirectio(path, grid);
         }
         for(let i = 1; i < path.length; i++) {
             if( path[i][0] === start || path[i][0] === end) continue;
@@ -99,8 +99,8 @@ const doInstantAnimatio = (grid, doAnimation, start, end, parent, path, result) 
         }    
         return;
     }
-    let shortestPath = getPath(parent);
-    shortestPath = getPathWithDirection(shortestPath, grid);
+    let shortestPath = getPat(parent);
+    shortestPath = getPathWithDirectio(shortestPath, grid);
     for(let i = 0; i < shortestPath.length; i++) {
         if( shortestPath[i][0] === start || shortestPath[i][0] === end) continue;
         const x = shortestPath[i][1] === 't' ? "node-weight" : "";
