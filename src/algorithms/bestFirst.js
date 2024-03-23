@@ -1,14 +1,17 @@
 import { getPath, doVisitedAnimation, doPathAnimation, isCellValid, doInstantAnimation } from "../utils/helpful";
-
+// This algorithm differs from astar in concept that it does not considers previously calculated
+// values and only the hueristics while astar considers both
 const bestFirst = async (grid, startX, startY, endX, endY, message, animationSpeed) => {
     const doAnimation = [], parent = [];
     const result = greedy(grid, startX, startY, endX, endY, doAnimation, parent);
     if(message) {
-        doInstantAnimation(grid, doAnimation, startX * 61 + startY, endX * 61 + endY, parent)
+        doInstantAnimation(grid, doAnimation, startX * 61 + startY, endX * 61 + endY, parent);
+        return result;
     }
     await doVisitedAnimation(doAnimation, startX * 61 + startY, endX * 61 + endY, animationSpeed);
     if(result === 'failure') return result; 
     const shortestPath = await getPath(parent);
+    shortestPath.pop();
     doPathAnimation(grid, shortestPath, startX * 61 + startY, endX * 61 + endY, animationSpeed);
     await new Promise((resolve) =>
           setTimeout(() => {
@@ -32,7 +35,9 @@ const greedy = (grid, startX, startY, endX, endY, doAnimation, parent) => {
     while(queue.length > 0) {
         let closestNode = Sort(queue, distance);
         const X = closestNode[0], Y = closestNode[1];
-        doAnimation.push(X * 61 + Y);
+        let m = grid[X][Y].isWeight ? "t" : "f";
+        doAnimation.push([X * 61 + Y, m]);
+
         visited[X][Y] = true;
         if(X === endX && Y === endY) {
             console.log(distance);

@@ -48,7 +48,6 @@ class PathFindingVisualizer extends Component {
     if(!this.state.shouldItBeAllowed) return;
     console.log(this.state.nodesGrid,'1');
     const n = clearEverything(this.state.nodesGrid);
-    console.log(n, '2');
     this.setState({ nodesGrid: n });
   }
   componentDidMount() {

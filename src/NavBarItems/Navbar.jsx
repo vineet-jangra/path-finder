@@ -73,7 +73,7 @@ class NavBar extends React.Component {
               <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("DFS", "DFS is unweigted and does not guarantees shortest path")} href="#"> Depth First Search</a>
               <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Dijkstra", "Dijkstra is weigted and always guarantees shortest path")} href="#"> DIJKSTRA</a>
               <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Astar", "Astar is weigted and always guarantees shortest path")} href="#">A STAR </a>
-              {/* <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Greedy", "Greedy is weigted and does not guarantees shortest path")} href="#"> Best First</a> */}
+              <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Greedy", "Greedy is weigted and does not guarantees shortest path")} href="#"> Best First</a>
               {/* <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Swarm")} href="#"> Swarm </a> */}
               <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Bi-BFS", "Bidirectional-BFS is unweigted and always guarantees shortest path")} href="#"> Bidirectional BFS</a>
               <a className="dropdown-item options-for-algo" onClick={() => this.selectAlgorithm("Bi-astar", "Bidirectional-Astar is weigted and does not guarantees shortest path")} href="#"> Bidirectional Astar</a>

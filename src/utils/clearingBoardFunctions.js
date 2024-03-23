@@ -53,7 +53,6 @@ const clearPrevious = (x1, y1, x2, y2, grid) => {
         }
         Grid.push(row);
       }
-      console.log(Grid);
       return Grid;
 }
 const clearEverything = (grid) => {
